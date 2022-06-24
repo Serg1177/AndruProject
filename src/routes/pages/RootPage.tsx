@@ -4,7 +4,9 @@ import { Footer } from '~/features/Footer';
 import { Header } from '~/features/Header';
 import { Auth } from '~/features/Login';
 import { Search } from '~/features/Search';
+import { SocialServices } from '~/features/SocialServices';
 import { PageTemplate } from '~/ui/templates';
+
 
 export const RootPage: React.FC = () => {
 
@@ -13,9 +15,15 @@ export const RootPage: React.FC = () => {
   if(!user){
     return <Auth setUser={setUser} />;
   }
-  return <PageTemplate
-    content={<Search />}
-    footer={<Footer />}
-    header={<Header />}
-  />;
+  return <SocialServices setUser={setUser}/>; 
+  // <PageTemplate
+  //   content={<Search />}
+  //   footer={<Footer />}
+  //   header={<Header />}
+  // />;
+  
+ 
 };
+
+
+
